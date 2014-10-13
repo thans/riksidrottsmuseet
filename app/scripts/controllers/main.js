@@ -8,10 +8,8 @@
  * Controller of the riksidrottsmuseetApp
  */
 angular.module('riksidrottsmuseetApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $location) {
+    $scope.selectUser = function(user) {
+        $location.path('/detail').search({userNumber: user.number});
+    };
   });
