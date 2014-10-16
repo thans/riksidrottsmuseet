@@ -11,22 +11,26 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 /* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+// body {
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+// }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+// .header,
+// .marketing,
+// .footer {
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
 
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -37,11 +41,26 @@ body {
   }
 }
 
+.header,
+.footer {
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+}
+
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   color: #777;
   border-top: 1px solid #e5e5e5;
+}
+
+.content {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .container-narrow > hr {
@@ -76,27 +95,8 @@ h1 {
 
 .statHeader {
   font-weight: bold;
-
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
+  background-color: white;
+  height:40px;
 }
 
 /* Responsive: Portrait tablets and up */
