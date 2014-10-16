@@ -23,14 +23,47 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 //   padding-left: 15px;
 //   padding-right: 15px;
 // }
+// dark blue 00228f
+// light blue b3e9ed
+// lavender 96afd6
+
+$dark-blue: #00228f;
+$light-blue: #b3e9ed;
+$lavender: #96afd6;
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   position: fixed;
   top: 0;
   left: 0;
 
+  -webkit-box-shadow: -1px 4px 20px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 4px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 4px 20px 0px rgba(0,0,0,0.75);
+  
+  height: 117px;
+  background-color: $dark-blue !important;
+
+  .backButton {
+    width: 99px;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    float: left;
+
+    padding-top: 35px;
+  }
+
+  .headerImage {
+    float: left;
+    background-image: url('/images/riksidrotts.png');
+    background-repeat: no-repeat;
+    background-position: left; 
+    width: 970px;
+    height: 100%;
+  }
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -44,22 +77,28 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 .header,
 .footer {
   text-align: center;
-  height: 50px;
+  
   width: 100%;
   background-color: white;
 }
 
 /* Custom page footer */
 .footer {
+  height: 50px;
   position: fixed;
   bottom: 0;
   left: 0;
-  color: #777;
+  color: $dark-blue;
   border-top: 1px solid #e5e5e5;
 }
 
+a, a:visited {
+  color: $dark-blue;
+}
+
+
 .content {
-  margin-top: 50px;
+  margin-top: 120px;
   margin-bottom: 50px;
 }
 
@@ -77,26 +116,27 @@ h1 {
   text-align: center;
   clear: left;
   height: 80px;
-  background-color: #F9F9F9;
+  background-color: $light-blue;
   margin-bottom: 10px;
   .statCol {
     float: left;
     width: 25%;
   }
 
-  .heartrate {
-    color: #FF0000;
-  }
 
-  .numSteps {
-    color: #006400;
-  }
 }
 
 .statHeader {
   font-weight: bold;
   background-color: white;
   height:40px;
+
+}
+
+.gifs {
+  float: left;
+  width: 480px;
+  text-align: center;
 }
 
 /* Responsive: Portrait tablets and up */
