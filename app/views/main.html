@@ -1,28 +1,46 @@
+<!--
+  strings = {
+    steps: 'Steps',
+    compare: 'Compare',
+    name: 'Name',
+    heart: 'Heart Rate'
+  };
+  -->
+
 <div class="userStats statHeader">
   <div class="statCol">
     <h1>#</h1>
   </div>
   <div class="statCol">
-    <h1><i class="fa fa-tasks"></i></h1>
+    <h1>{{strings.name}}</h1>
   </div>
   <div class="statCol heartrate">
-    <h1><i class="fa fa-heart"></i></h1>
+    <h1><span class="glyphicon glyphicon-heart"></span></h1>
   </div>
   <div class="statCol numSteps">
-    <h1><i class="fa fa-paw"></i></h1>
+    <h1>{{strings.steps}}</h1>
+  </div>
+  <div class="statCol compare" ng-click="compareUsers()">
+    <h1>{{strings.compare}}</h1>
   </div>
 </div>
-<div class="userStats" ng-repeat="user in users" ng-click="selectUser(user)">
-  <div class="statCol">
+<div class="userStats" ng-repeat="user in users">
+  <div class="statCol userNumber"  ng-click="selectUser(user)">
     <h2>{{user.number}}</h2>
   </div>
-  <div class="statCol">
+  <div class="statCol"  ng-click="selectUser(user)">
     <h2>{{user.name}}</h2>
   </div>
-  <div class="statCol heartrate">
+  <div class="statCol heartrate" ng-click="selectUser(user)">
     <h2>{{user.heartRate}}</h2>
   </div>
-  <div class="statCol numSteps">
+  <div class="statCol numSteps" ng-click="selectUser(user)">
     <h2>{{user.steps}}</h2>
+  </div>
+  <div class="statCol compare">
+    <div class="squaredOne">
+      <input type="checkbox" value="{{user.number}}" id="box_{{user.number}}" name="check" class="compareMe"/>
+      <label for="box_{{user.number}}"></label>
+    </div>
   </div>
 </div>

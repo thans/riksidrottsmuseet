@@ -1,4 +1,5 @@
 'use strict';
+/*global $:false */
 
 /**
  * @ngdoc overview
@@ -24,6 +25,10 @@ angular.module('riksidrottsmuseetApp', [
     .when('/detail', {
       templateUrl: 'views/detail.html',
       controller: 'DetailCtrl'
+    })
+    .when('/compare', {
+      templateUrl: 'views/compare.html',
+      controller: 'CompareCtrl'
     })
     .otherwise({
       redirectTo: '/'
@@ -157,4 +162,43 @@ angular.module('riksidrottsmuseetApp', [
     }
     $rootScope.$apply();
   }, 15000);
+
+  $rootScope.useEnglish = true;
+
+    $rootScope.changeLanguage = function() {
+        $rootScope.useEnglish = !$rootScope.useEnglish;
+        $('.flag').toggleClass('english').toggleClass('swedish');
+        // change strings
+        if ($rootScope.useEnglish) {
+            $rootScope.strings = $rootScope.englishStrings;
+
+        } else {
+            $rootScope.strings = $rootScope.swedishStrings;
+        }
+    };
+
+    $rootScope.swedishStrings = {
+        steps: 'xxx',
+        compare: 'yyy',
+        name: 'namn',
+        heart: 'hjarta',
+        seconds: 'sekunder'
+    };
+
+    $rootScope.englishStrings = {
+        steps: 'Steps',
+        compare: 'Compare',
+        name: 'Name',
+        heart: 'Heart Rate',
+        seconds: 'Seconds'
+    };
+
+    // if language is swedish, then change strings
+    if ($rootScope.useEnglish) {
+        $rootScope.strings = $rootScope.englishStrings;
+    } else {
+        $rootScope.strings = $rootScope.swedishStrings;
+    }
+
+    $rootScope.$apply();
 });
