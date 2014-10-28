@@ -20,7 +20,7 @@
   <div class="statCol numSteps">
     <h1>{{strings.steps}}</h1>
   </div>
-  <div class="statCol compare" ng-click="compareUsers()">
+  <div class="statCol compare" id="compareButton" ng-click="compareUsers()">
     <h1>{{strings.compare}}</h1>
   </div>
 </div>
@@ -38,7 +38,7 @@
     <h2>{{user.steps}}</h2>
   </div>
   <div class="statCol compare">
-    <div class="squaredOne">
+    <div class="squaredOne" ng-click="checkCompare()">
       <input type="checkbox" value="{{user.number}}" id="box_{{user.number}}" name="check" class="compareMe"/>
       <label for="box_{{user.number}}"></label>
     </div>

@@ -135,6 +135,11 @@ input[type=checkbox] {
     margin-left: 100px;
 }
 
+.compareClick {
+  background-color: $dark-blue;
+  color: white;
+}
+
 /* Custom page header */
 .header {
   position: fixed;
@@ -232,10 +237,21 @@ h1 {
   .statCol {
     float: left;
     width: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
 
 }
+
+.blink{
+    animation:blink 700ms infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity:1; }
+    to { opacity:0; }
+};
 
 .statHeader {
   font-weight: bold;
@@ -246,7 +262,7 @@ h1 {
 
 .gifs {
   float: left;
-  width: 480px;
+  width: 450px;
   text-align: center;
 }
 
