@@ -10,6 +10,7 @@
 angular.module('riksidrottsmuseetApp')
   .controller('CompareCtrl', function ($scope, $routeParams) {
     $scope.compareUsers = [];
+    $('#goBack').show();
     var passedUsers = $routeParams.compareUsers.split('+');
     console.log('passed', passedUsers);
     for (var num in passedUsers) {

@@ -24,23 +24,25 @@
     <h1>{{strings.compare}}</h1>
   </div>
 </div>
-<div class="userStats" ng-repeat="user in users">
-  <div class="statCol userNumber"  ng-click="selectUser(user)">
-    <h2>{{user.number}}</h2>
-  </div>
-  <div class="statCol"  ng-click="selectUser(user)">
-    <h2>{{user.name}}</h2>
-  </div>
-  <div class="statCol heartrate" ng-click="selectUser(user)">
-    <h2>{{user.heartRate}}</h2>
-  </div>
-  <div class="statCol numSteps" ng-click="selectUser(user)">
-    <h2>{{user.steps}}</h2>
-  </div>
-  <div class="statCol compare">
-    <div class="squaredOne" ng-click="checkCompare()">
-      <input type="checkbox" value="{{user.number}}" id="box_{{user.number}}" name="check" class="compareMe"/>
-      <label for="box_{{user.number}}"></label>
+<div class="statContainer">
+  <div class="userStats" ng-repeat="user in users">
+    <div class="statCol userNumber"  ng-click="selectUser(user)">
+      <h2>{{user.number}}</h2>
+    </div>
+    <div class="statCol"  ng-click="selectUser(user)">
+      <h2>{{user.name}}</h2>
+    </div>
+    <div class="statCol heartrate" ng-click="selectUser(user)">
+      <h2>{{user.heartRate}}</h2>
+    </div>
+    <div class="statCol numSteps" ng-click="selectUser(user)">
+      <h2>{{user.steps}}</h2>
+    </div>
+    <div class="statCol compare">
+      <div class="squaredOne" ng-click="checkCompare()">
+        <input type="checkbox" value="{{user.number}}" id="box_{{user.number}}" name="check" class="compareMe"/>
+        <label for="box_{{user.number}}"></label>
+      </div>
     </div>
   </div>
 </div>

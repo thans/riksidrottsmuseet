@@ -15,6 +15,8 @@ angular.module('riksidrottsmuseetApp')
     };
     $scope.compareBlink = false;
 
+    $('#goBack').hide();
+
     $scope.checkCompare = function() {
         var checked = 0;
 
