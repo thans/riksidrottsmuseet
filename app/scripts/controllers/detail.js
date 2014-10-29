@@ -1,5 +1,5 @@
 'use strict';
-
+/*global $:false */
 /**
  * @ngdoc function
  * @name riksidrottsmuseetApp.controller:DetailCtrl

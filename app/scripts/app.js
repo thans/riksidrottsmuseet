@@ -182,7 +182,12 @@ angular.module('riksidrottsmuseetApp', [
         compare: 'yyy',
         name: 'namn',
         heart: 'hjarta',
-        seconds: 'sekunder'
+        seconds: 'sekunder',
+        comparison: {
+            fastest: 'aaa',
+            throwing: 'bbb',
+            steps: 'ccc'
+        }
     };
 
     $rootScope.englishStrings = {
@@ -190,7 +195,12 @@ angular.module('riksidrottsmuseetApp', [
         compare: 'Compare',
         name: 'Name',
         heart: 'Heart Rate',
-        seconds: 'Seconds'
+        seconds: 'Seconds',
+        comparison: {
+            fastest: 'Fastest',
+            throwing: 'Hardest Throw',
+            steps: 'Most Steps'
+        }
     };
 
     // if language is swedish, then change strings

@@ -1,4 +1,4 @@
-<div class="userStats" ng-repeat="user in compareUsers">
+<!-- <div class="userStats" ng-repeat="user in compareUsers">
   <div class="statCol">
     <h2>{{user.number}}</h2>
   </div>
@@ -14,5 +14,34 @@
   <div class="statCol compare">
     <checkbox class="compareMe">
     </checkbox>
+  </div>
+</div> -->
+
+<div>
+  <div class="compareCol">
+    <iframe src="//giphy.com/embed/7lz6nPd56aHh6" width="470" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <div class="compareCol">
+    <h1>{{strings.comparison.fastest}}</h1>
+    <h2>#{{stats.fastest.userNum}} {{stats.fastest.userName}}</h2>
+    <h3>{{stats.fastest.result}} s</h3>
+  </div>
+  <hr />
+  <div class="compareCol">
+    <h1>{{strings.comparison.throwing}}</h1>
+    <h2>#{{stats.throwing.userNum}} {{stats.throwing.userName}}</h2>
+    <h3>{{stats.throwing.result}} km/hr</h3>
+  </div>
+  <div class="compareCol">
+    <iframe src="//giphy.com/embed/HHFN7sV7ffLyM" width="470" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <hr />
+  <div class="compareCol">
+    <iframe src="//giphy.com/embed/Cwmyz3p4chMAg" width="470" height="270" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  </div>
+  <div class="compareCol">
+    <h1>{{strings.comparison.steps}}</h1>
+    <h2>#{{stats.steps.userNum}} {{stats.steps.userName}}</h2>
+    <h3>{{stats.steps.result}} steps</h3>
   </div>
 </div>
